@@ -9,14 +9,15 @@ public function index(){
   $this->load->database();
   $this->load->model('topic_model');
   $data = $this->topic_model->gets();
+
     $this->load->view('head');
-  $this->load->view('topic');
+  $this->load->view('main', array('topics1'=>$data));
     $this->load->view('footer');
 }
-public function main($id1){
+public function get($id1){
   $this->load->view('head');
 
-  $this->load->view('main', array('id'=>$id1));
+  $this->load->view('topic', array('id'=>$id1));
   $this->load->view('footer');
 
 }
