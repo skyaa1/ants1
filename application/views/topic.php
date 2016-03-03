@@ -4,10 +4,12 @@
     <?=$topics2->title?>
   </h1>
   <div>
-    <?=$topics2->description?>
-  </div>
-  <div>
-    <?=$topics2->created?>
+    <div>
 
+      <?= kdate($topics2->created)?>
+
+    </div>
+    <?=auto_link($topics2->description)?>
   </div>
+
 </article>
