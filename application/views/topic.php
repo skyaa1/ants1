@@ -1,4 +1,4 @@
-
+<div class="span10">
 <article>
   <h1>
     <?=$topics2->title?>
@@ -13,3 +13,10 @@
   </div>
 
 </article>
+
+<div>
+  <form class="" action="index.html" method="post">
+    <input type="button" name="name" value="">
+  </form>
+</div>
+</div>
