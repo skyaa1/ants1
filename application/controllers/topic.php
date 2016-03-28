@@ -8,6 +8,7 @@ class Topic extends CI_Controller {
 
      $this->load->database();
      $this->load->model('topic_model');
+
   }
 
 
