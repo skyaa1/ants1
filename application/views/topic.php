@@ -15,8 +15,10 @@
 </article>
 
 <div>
-  <form class="" action="index.html" method="post">
-    <input type="button" name="name" value="">
+  <form  action="/topic/add" method="post">
+
+     <a href="http://localhost/index.php/topic/add" class="btn">버튼</a>
+     
   </form>
 </div>
 </div>
