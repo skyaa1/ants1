@@ -1,39 +1,40 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Bootstrap -->
-        <link href="/static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <style>
-            body{
-                padding-top:60px;
-            }
-        </style>
-        <link href="/static/lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="navbar navbar-fixed-top">
-          <div class="navbar-inner">
-            <div class="container">
+ <html>
+   <head>
+    <style>
+      body{
+        padding-top: 60px;
+      
+      }
 
-              <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-              <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </a>
+    </style>
 
-              <!-- Be sure to leave the brand out there if you want it shown -->
-              <a class="brand" href="#">JavaScript</a>
 
-              <!-- Everything you want hidden at 940px or less, place within here -->
-              <div class="nav-collapse collapse">
-                <!-- .nav, .navbar-search, .navbar-form, etc -->
-              </div>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            </div>
-          </div>
-        </div>
-        <div class="container">
-                <div class="row-fluid">
+     <link href="/static/lib/bootstrap/css/bootstrap.css"  rel="stylesheet" media="screen">
+     <link href="/static/lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+  </head>
+
+   <body>
+
+<div class="navbar navbar-fixed-top">
+ <div class="navbar-inner">
+   <div class="container">
+
+
+      <a class="brand" href="/index.php/topic">javascript</a>
+
+
+      <div class="nav-collapse collapse">
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+     <div class="container-fluid">
+       <div class="row-fluid">

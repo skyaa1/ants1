@@ -9,42 +9,56 @@ class Topic extends CI_Controller {
      $this->load->database();
      $this->load->model('topic_model');
 
-  }
 
+  }
 
 public function index(){
 
-  $this->_add();
+
+
+  $this->_head();
+  $this->load->view('footer');
+
+
+}
+
+public function get($id){
+
+  $this->_head();
+  $data1 = $this->topic_model->gets($id);
+
+  $this->load->helper(array('url','html','korean'));
+  $this->load->view
+  ('topic', array('topics'=>$data1));
+  $this->load->view('footer');
+
+}
+
+public function add(){
+
+
+  $this->_head();
+
+  $this->load->library('form_validation');
+  $this->form_validation->set_rules('name', '제목', 'required');
+  $this->form_validation->set_rules('description', '내용', 'required');
+  if ($this->form_validation->run() == FALSE){
+     $this->load->view('add');
+
+  } else{
+    echo "성공";
+  }
+
+
 
   $this->load->view('footer');
 }
-public function get($id1){
 
-  $data1 = $this->topic_model->get($id1);
-
-  $this->_add();
-
-  $this->load->helper(array('url', 'HTML', 'korean'));
-  $this->load->view('topic', array('topics2'=>$data1));
-  $this->load->view('footer');
-
-}
- public function add(){
-
-   $this->_add();
-
-  echo $this->input->post('name');
-  echo $this->input->post('description');
-
-   $this->load->view('add');
-   $this->load->view('footer');
-}
-
-function _add(){
-  $data = $this->topic_model->gets();
-  $this->load->view('head');
-  $this->load->view('topic_list', array('topics1'=>$data));
-}
+ function _head(){
+   $data = $this->topic_model->get();
+   $this->load->view('head');
+   $this->load->view('topic_list', array('topic'=>$data));
+ }
 
 }
 ?>

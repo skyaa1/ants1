@@ -1,12 +1,15 @@
+
 <div class="span2">
-    <ul class="nav nav-tabs nav-stacked">
- <?php
-  foreach($topics1 as  $value){
-  ?>
-  <li><a href="/index.php/topic/get/<?=$value->id?>"><?= $value ->title ?></a></li>
+   <ul class="nav nav-tabs nav-stacked">
 
-  <?php
+    <?php
+        foreach($topic as $data3){
+    ?>
 
- } ?>
-</ul>
+        <li><a href="/index.php/topic/get/<?=$data3->id?>"><?=$data3->title?></a></li>
+
+    <?php
+        }
+    ?>
+  </ul>
 </div>

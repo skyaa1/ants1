@@ -1,24 +1,16 @@
+
 <div class="span10">
-<article>
-  <h1>
-    <?=$topics2->title?>
-  </h1>
-  <div>
-    <div>
+   <article>
+     <h2> <?=$topics->title?></h2>
+     <div>
+       <div>
+         <?=kdate($topics->created)?>
+       </div>
+     <?=$topics->description?>
+     </div>
+   </article>
+   <div>
+     <a href="/index.php/topic/add" class="btn btn-primary">쓰기</a>
+   </div>
 
-      <?= kdate($topics2->created)?>
-
-    </div>
-    <?=auto_link($topics2->description)?>
-  </div>
-
-</article>
-
-<div>
-  <form  action="/topic/add" method="post">
-
-     <a href="http://localhost/index.php/topic/add" class="btn">버튼</a>
-     
-  </form>
-</div>
 </div>

@@ -1,8 +1,9 @@
-<form action="/index.php/topic/add" method="post" class="span10">
-   제목:<input type="text" name="name" value="" >
 
-   글: <textarea name="description" >
 
-       </textarea>
-    <input type="submit" >
-</form>
+ <form  action="/index.php/topic/add" method="post" class="span10">
+
+    <?php echo validation_errors(); ?>
+    <input class="span12" type="text" name="name" placeholder="제목" >
+    <textarea class="span12" name="description" placeholder="내용" rows="8" cols="40"></textarea>
+    <input type="submit" class="btn btn-primary"   value="저장">
+ </form>
