@@ -20,8 +20,12 @@
      <div class="span1">
         <a href="/index.php/topic/add" class="btn btn-primary">쓰기</a>
      </div>
+     <form class="span1" action="/index.php/topic/update" method="post">
+       <input type="hidden" name="update" value="<?= $id?>">
+       <input type="submit"  value="수정" class="btn btn-primary">
+     </form>
       <form class="span1" action="/index.php/topic/delete" method="post">
-      <input type="hidden" name="delete" value="<?= $delete_id?>">
+      <input type="hidden" name="delete" value="<?= $id?>">
         <input type="submit" value="삭제" class="btn btn-primary">
       </form>
     </div>
