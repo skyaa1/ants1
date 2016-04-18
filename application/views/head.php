@@ -4,7 +4,7 @@
     <style>
       body{
         padding-top: 60px;
-      
+
       }
 
     </style>
@@ -23,7 +23,7 @@
    <div class="container">
 
 
-      <a class="brand" href="/index.php/topic">javascript</a>
+      <a class="brand" style="color:green" href="/index.php/topic/get/42">ents dev.</a>
 
 
       <div class="nav-collapse collapse">

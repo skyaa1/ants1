@@ -1,0 +1,348 @@
+@charset "utf-8";
+/* NHN Incomms Web Standard UI Part KMJ 120917 */
+
+.bus_realinfo{position:relative;top:-5px;width:590px;font-size:12px!important;zoom:1}
+
+/* 지역 목록형 탭메뉴 */
+.bus_realinfo .bus_tab{clear:both;position:relative;z-index:20;zoom:1}
+.bus_realinfo .bus_tab ul{overflow:hidden;height:29px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/bg_tab.gif) no-repeat 0 0;font-size:12px}
+.bus_realinfo .bus_tab ul li{float:left;padding-left:1px;line-height:18px}
+.bus_realinfo .bus_tab ul li a{display:inline-block;width:117px;padding:6px 0 5px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/bg_tab.gif) no-repeat 100% -59px;color:#68737f;text-align:center;text-decoration:none}
+.bus_realinfo .bus_tab ul .all a{width:119px}
+.bus_realinfo .bus_tab ul .more a{width:115px;background:none}
+.bus_realinfo .bus_tab ul .on{margin-left:-2px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/bg_tab.gif) no-repeat 0 -118px}
+.bus_realinfo .bus_tab ul .more span{display:inline-block;float:left;padding-left:17px}
+.bus_realinfo .bus_tab ul .on.all{margin-left:0}
+.bus_realinfo .bus_tab ul .on a{background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/bg_tab.gif) no-repeat 100% -118px;font-weight:bold;color:#fff;cursor:default}
+.bus_realinfo .bus_tab ul .on.more a{width:117px}
+.bus_realinfo .bus_tab .bg_sp{background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/sp_bg.gif) no-repeat;vertical-align:middle}
+.bus_realinfo .bus_tab ul .more a .ico_more_off,.bus_realinfo .bus_tab ul .more a .ico_more_on,.bus_realinfo .bus_tab ul .more.on a .ico_more_off,.bus_realinfo .bus_tab ul .more.on a .ico_more_on{display:inline-block;overflow:hidden;float:right;width:13px;height:13px;margin:2px 9px 0 3px;cursor:pointer}
+.bus_realinfo .bus_tab ul .more a .ico_more_off{background-position:-289px -403px}
+.bus_realinfo .bus_tab ul .more a .ico_more_on{background-position:-289px -430px}
+.bus_realinfo .bus_tab ul .more.on a .ico_more_off{background-position:-289px -458px}
+.bus_realinfo .bus_tab ul .more.on a .ico_more_on{background-position:-289px -484px}
+
+/* 지역 목록형 더보기 레이어 */
+.bus_realinfo .bus_tab ul li .bus_list_more{display:none;z-index:20;height:0}
+.bus_realinfo .bus_tab ul li .bus_list_more ul{overflow:hidden;position:absolute;top:28px;right:0;width:116px;height:auto;border:1px solid #b3bbc1;background:#fff;font-size:12px}
+.bus_realinfo .bus_tab ul li .bus_list_more ul li{display:block;width:100%;height:26px;margin:0;padding:0;border-top:1px solid #f5f5f5}
+.bus_realinfo .bus_tab ul li .bus_list_more ul li:first-child{border-top:none}
+.bus_realinfo .bus_tab ul li .bus_list_more ul li a{width:106px;padding:4px 0 0 19px;background:none;font-weight:normal;color:#777;text-align:left;cursor:pointer}
+.bus_realinfo .bus_tab ul li .bus_list_more ul li a:hover{color:#34ac48}
+
+.bus_realinfo .bi_wrap{position:relative;z-index:10;width:588px;height:379px;margin-top:-1px;border:1px solid #C9CCD1}
+.bus_realinfo .bi_map_area{float:left;width:280px;border-right:1px solid #C9CCD1}
+.bus_realinfo .bi_map_area .bi_map{overflow:hidden;height:350px}
+.bus_realinfo .bi_map_area .bi_map img{display:inline-block}
+.bus_realinfo .bi_map_area .option{border-top:1px solid #e4e4e4;background:#f9f9f9}
+.bus_realinfo .bi_map_area .option .opt_wrap{height:28px}
+.bus_realinfo .bi_map_area .option ul{display:inline;float:left;margin:3px 0 0 4px}
+.bus_realinfo .bi_map_area .option li{float:left}
+.bus_realinfo .bi_map_area .option .btn_map{display:block;width:32px;height:22px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/btn_mopt.gif) no-repeat 0 0}
+.bus_realinfo .bi_map_area .option .on .btn_map{width:33px;background-position:0 -27px}
+.bus_realinfo .bi_map_area .option .btn_sat{display:block;width:52px;height:22px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/btn_mopt.gif) no-repeat -33px -27px}
+.bus_realinfo .bi_map_area .option .on .btn_sat{width:53px;background-position:-32px 0}
+.bus_realinfo .bi_map_area .option .btn_reset{display:inline-block;overflow:hidden;float:left;width:56px;height:22px;margin:3px 0 0 106px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/btn_mopt.gif) no-repeat -87px 0}
+.bus_realinfo .bi_map_area .option .btn_zoom{display:inline-block;overflow:hidden;float:right;width:22px;height:22px;margin:3px 4px 0 0;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/btn_mopt.gif) no-repeat -90px -27px}
+
+/* TA_목록형 버스 검색 결과 */
+.bus_realinfo .query_result{overflow:hidden;clear:both;margin-bottom:7px}
+.bus_realinfo .query_result .k_bus_result{float:left;min-width:390px;margin:1px 0 1px -1px;font-size:12px;line-height:18px}
+.bus_realinfo .query_result .k_bus_result em{color:#eb5629}
+.bus_realinfo .query_result .select_district{float:left;padding:1px 0 3px}
+.bus_realinfo .query_result .select_district select{width:200px}
+.bus_realinfo .query_q{overflow:hidden;clear:both;margin-bottom:3px;padding-left:9px;border:1px solid #f6f6f6;background:#fafafa;line-height:35px;font-size:12px}
+.bus_realinfo .query_q a{padding-left:15px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/blt.png) no-repeat 6px 5px}
+
+/* TA_목록형 버스 리스트 */
+.bus_realinfo .bi_info_area{float:left;width:307px}
+.bus_realinfo .bi_info_area .scroll{overflow-y:auto;position:relative;height:379px;scrollbar-3dlight-color:#e7e7e7;scrollbar-highlight-color:#fff;scrollbar-shadow-color:#fff;scrollbar-darkshadow-color:#e7e7e7;scrollbar-arrow-color:#a4a4a4;scrollbar-face-color:#fff;scrollbar-track-color:#f4f4f4;zoom:1}
+.bus_realinfo .bi_info_area li{overflow:hidden;position:relative;top:0;left:0;min-height:58px;padding:10px 0 7px 51px;border-top:1px solid #f5f5f5;font-size:12px;line-height:16px;vertical-align:top;zoom:1}
+.bus_realinfo .bi_info_area .selec{overflow:hidden;z-index:20;margin:-1px 0;border-top:1px solid #e0e9f4;border-bottom:1px solid #e0e9f4;background:#f8fbfe}
+.bus_realinfo .bi_info_area li:first-child{border-top:none}
+.bus_realinfo .bi_info_area li .k_bus_thumb{overflow:hidden;position:absolute;top:10px;left:12px}
+.bus_realinfo .bi_info_area li .k_bus_thumb .ico{width:27px;height:25px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/ico_bus_set.gif) no-repeat}
+.bus_realinfo .bi_info_area li .k_bus_thumb .ico_bus{background-position:0 0}
+.bus_realinfo .bi_info_area li .k_bus_thumb .ico_bus2{background-position:0 -56px}
+.bus_realinfo .bi_info_area li .k_bus_thumb .ico_bus3{background-position:0 -112px}
+.bus_realinfo .bi_info_area li .k_bus_thumb .ico_bus4{background-position:0 -168px}
+.bus_realinfo .bi_info_area li .k_bus_thumb .ico_bus5{background-position:0 -224px}
+.bus_realinfo .bi_info_area li .k_bus_thumb .ico_bus6{background-position:0 -280px}
+.bus_realinfo .bi_info_area li .k_bus_thumb .ico_bus7{background-position:0 -336px}
+.bus_realinfo .bi_info_area li .k_bus_thumb a{display:block;height:28px;text-indent:-9999px}
+
+/* 버스 번호 회사 정보 */
+.bus_realinfo .bi_info_area li .k_bus_info{overflow:hidden;width:171px;margin-left:-1px;font-size:12px}
+.bus_realinfo .bi_info_area li .k_bus_num{text-decoration:none}
+.bus_realinfo .bi_info_area li .k_bus_company{padding:0 0 0 6px;font-family:'돋움',Dotum;font-size:11px;color:#888;letter-spacing:-1px;vertical-align:1px}
+.bus_realinfo .bi_info_area li .k_bus_bar{padding:0 5px;color:#e5e5e5}
+
+/* 버스 노선 운행 정보 */
+.bus_realinfo .bi_info_area li .k_bus_route{display:block;overflow:hidden;width:242px;padding:5px 0 1px;*padding:5px 0 3px;white-space:nowrap;text-overflow:ellipsis}
+.bus_realinfo .bi_info_area li .k_bus_route a{padding-left:4px;vertical-align:2px}
+.bus_realinfo .bi_info_area li .k_bus_route a:hover{font-weight:bold}
+
+/* 버스 시간 운행 정보 */
+.bus_realinfo .bi_info_area li dl{overflow:hidden;font-size:12px}
+.bus_realinfo .bi_info_area li dt:first-child{margin-left:-1px}
+.bus_realinfo .bi_info_area li dt,.bus_realinfo .bi_info_area li dd{float:left;color:#666}
+.bus_realinfo .bi_info_area li dd{padding-left:4px}
+.bus_realinfo .bi_info_area li .k_bus_time{color:#f22929}
+.bus_realinfo .bi_info_area li .k_bus_time .k_bus_bar{padding:0 5px 0 7px}
+
+/* 실시간 버스 정보 보기 */
+.bus_realinfo .bi_info_area li .k_bus_nt,.bus_realinfo .bi_info_area li .k_bus_rt{overflow:hidden;position:absolute;top:7px;right:10px;width:54px;height:20px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/sp_bg.gif) no-repeat 0 -230px;text-indent:-9999px}
+.bus_realinfo .bi_info_area li .k_bus_rt{width:49px;background-position:0 -252px}
+
+/* 접속지역 오류신고 및 다른관심지역설정 */
+.bus_realinfo .notice_area{overflow:hidden;position:relative;margin:6px 0 7px;font-family:'돋움',Dotum;font-size:11px;line-height:20px;color:#666;letter-spacing:-1px}
+.bus_realinfo .notice_area em{color:#eb5629}
+.bus_realinfo .notice_area a{color:#666;text-decoration:underline}
+.bus_realinfo .notice_area .bus_notice{padding:3px 0 2px 18px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/ico_noti.gif) no-repeat -1px 1px;color:#999}
+.bus_realinfo .notice_area .bus_notice a{color:#999}
+.bus_realinfo .notice_area .other_btn{overflow:hidden;position:absolute;top:0;right:0}
+.bus_realinfo .notice_area .other_btn .btn_area_er,.bus_realinfo .notice_area .other_btn .btn_area_set{display:inline-block;overflow:hidden;height:20px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/sp_bg.gif) no-repeat;line-height:999px;vertical-align:top}
+.bus_realinfo .notice_area .other_btn .btn_area_er{width:97px;background-position:-60px -230px}
+.bus_realinfo .notice_area .other_btn .btn_area_set{width:105px;background-position:-60px -252px}
+
+/* 선택한 버스 정보 레이어 */
+.bus_realinfo .bi_info_area2{overflow:hidden;position:absolute;top:-1px;right:-1px;z-index:21;width:307px;height:379px;border:1px solid #a5a5aa}
+.bus_realinfo .bi_info_area2.off{position:relative;top:0;right:0;border:none}
+.bus_realinfo .bi_info_area2 .ly_k_bus{overflow:hidden;position:relative;top:0;left:0;padding:10px 0 9px 51px;border-bottom:1px solid #d7dadf;background:#f7f8fa;font-size:12px;line-height:16px;vertical-align:top}
+.bus_realinfo .bi_info_area2 .ly_k_bus .k_bus_thumb{overflow:hidden;position:absolute;top:10px;left:12px}
+.bus_realinfo .bi_info_area2 .ly_k_bus .k_bus_thumb .ico{width:27px;height:25px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/ico_bus_set.gif) no-repeat}
+.bus_realinfo .bi_info_area2 .ly_k_bus .k_bus_thumb .ico_bus{background-position:0 0}
+.bus_realinfo .bi_info_area2 .ly_k_bus .k_bus_thumb .ico_bus2{background-position:0 -56px}
+.bus_realinfo .bi_info_area2 .ly_k_bus .k_bus_thumb .ico_bus3{background-position:0 -112px}
+.bus_realinfo .bi_info_area2 .ly_k_bus .k_bus_thumb .ico_bus4{background-position:0 -168px}
+.bus_realinfo .bi_info_area2 .ly_k_bus .k_bus_thumb .ico_bus5{background-position:0 -224px}
+.bus_realinfo .bi_info_area2 .ly_k_bus .k_bus_thumb .ico_bus6{background-position:0 -280px}
+.bus_realinfo .bi_info_area2 .ly_k_bus .k_bus_thumb .ico_bus7{background-position:0 -336px}
+.bus_realinfo .bi_info_area2 .ly_k_bus .k_bus_thumb a{display:block;height:28px;text-indent:-9999px}
+.bus_realinfo .bi_info_area2 .ly_k_bus .k_bus_info{overflow:hidden;width:227px;margin-left:-1px;font-size:12px}
+.bus_realinfo .bi_info_area2 .ly_k_bus .k_bus_num{text-decoration:none}
+.bus_realinfo .bi_info_area2 .ly_k_bus .k_bus_company{padding:0 0 0 6px;font-family:'돋움',Dotum;font-size:11px;color:#888;letter-spacing:-1px;vertical-align:1px}
+.bus_realinfo .bi_info_area2 .ly_k_bus .k_bus_route{display:block;overflow:hidden;width:242px;padding:5px 0 3px;white-space:nowrap;text-overflow:ellipsis}
+.bus_realinfo .bi_info_area2 .ly_k_bus .k_bus_route img{vertical-align:middle}
+.bus_realinfo .bi_info_area2 .ly_k_bus .k_bus_route a{max-width:208px;padding-left:4px;vertical-align:middle}
+.bus_realinfo .bi_info_area2 .ly_k_bus .k_bus_route a:hover{font-weight:bold}
+.bus_realinfo .bi_info_area2 .ly_k_bus dl{overflow:hidden;font-size:12px}
+.bus_realinfo .bi_info_area2 .ly_k_bus dt:first-child{margin-left:-1px}
+.bus_realinfo .bi_info_area2 .ly_k_bus dt,.bus_realinfo .bi_info_area2 .ly_k_bus dd{float:left;color:#666}
+.bus_realinfo .bi_info_area2 .ly_k_bus dd{padding-left:4px}
+.bus_realinfo .bi_info_area2 .ly_k_bus .k_bus_time{color:#f22929}
+.bus_realinfo .bi_info_area2 .ly_k_bus .k_bus_bar{padding:0 5px;color:#e5e5e5}
+.bus_realinfo .bi_info_area2 .ly_k_bus .k_bus_time .k_bus_bar{padding:0 5px 0 7px}
+.bus_realinfo .bi_info_area2 .ly_k_bus .ly_bus_close{overflow:hidden;position:absolute;top:6px;right:6px;width:18px;height:17px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/sp_bg.gif) no-repeat -284px -297px;text-indent:-9999px}
+.bus_realinfo .bi_info_area2.off .ly_k_bus .ly_bus_close{display:none}
+
+/* 선택한 버스 실시간정보, 5분이상경과, 버스노선 */
+.bus_realinfo .bi_info_area2 .topbar,.bus_realinfo .bi_info_area2 .topbar2,.bus_realinfo .bi_info_area2 .topbar3{position:relative;height:25px;border-bottom:1px solid #C9CCD1;border-top:1px solid #fff;background:#F7F8FA}
+.bus_realinfo .bi_info_area2 .topbar .k_bus_udt,.bus_realinfo .bi_info_area2 .topbar2 .k_bus_tover,.bus_realinfo .bi_info_area2 .topbar3 .k_bus_noinfo{padding-left:29px;padding-top:6px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/sp_bg.gif) no-repeat -278px -266px;line-height:14px;font-family:'돋움',Dotum;font-size:11px;color:#777;letter-spacing:-1px}
+.bus_realinfo .bi_info_area2 .topbar .k_bus_udt .udt_time{letter-spacing:normal}
+.bus_realinfo .bi_info_area2 .topbar .k_bus_udt .k_bus_now{padding-left:43px;color:#444}
+.bus_realinfo .bi_info_area2 .topbar .k_bus_udt .k_bus_now strong{letter-spacing:normal}
+.bus_realinfo .bi_info_area2 .topbar2 .k_bus_tover{background-position:-278px -324px;color:#999}
+.bus_realinfo .bi_info_area2 .topbar3 .k_bus_noinfo{background-position:-278px -346px}
+.bus_realinfo .bi_info_area2 a.btn_refresh{display:block;overflow:hidden;position:absolute;top:-1px;right:0;width:27px;height:26px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/sp_bg.gif) no-repeat -275px -230px}
+
+/* 선택한 버스 노선 정보 리스트 레이어 */
+.bus_realinfo .bi_info_area2 .scroll2{overflow-y:auto;position:relative;height:276px;font-size:12px;scrollbar-3dlight-color:#e7e7e7;scrollbar-highlight-color:#fff;scrollbar-shadow-color:#fff;scrollbar-darkshadow-color:#e7e7e7;scrollbar-arrow-color:#a4a4a4;scrollbar-face-color:#fff;scrollbar-track-color:#f4f4f4;zoom:1}
+.bus_realinfo .bi_info_area2 .scroll2.reduce{height:260px !important}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list{background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/sp_lst.gif) repeat-y 0 0}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list li{position:relative;height:48px;padding-left:11px;background:#fff url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/sp_bg4.png) no-repeat 0 -104px;zoom:1}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list .down{background-position:0 -505px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list .not{background-position:0 -664px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list .bus_up{background-position:0 -2px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list .transfer{background-position:0 -52px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list .bus_first{background-position:0 -405px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list .bus_rast{background-position:0 -305px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list li a{font-size:12px;color:#00C;text-decoration:none}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list li a:hover{color:#00C;text-decoration:underline}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list li.selected{height:49px;margin-top:-1px;background-position: 0 -254px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list li.down.selected{background-position:0 -555px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list li.bus_up.selected{height:49px;margin-top:-1px;background-position: 0 -154px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list li.bus_up.not{height:49px;margin-top:-1px;background-position: 0 -610px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list li.transfer.selected{height:49px;margin-top:-1px;background-position: 0 -204px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list li.bus_first.selected{height:49px;margin-top:-1px;background-position: 0 -355px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list li.bus_rast.selected{height:49px;margin-top:-1px;background-position: 0 -454px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list li.selected div{padding:10px 0 4px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list li div{padding:9px 0 4px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list li .place_name{margin-right:4px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list li.selected .place_name{font-weight:bold}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list li .btn_position{display:inline-block;font-size:11px;font-family:'돋움',dotum,AppleGothic,sans-serif;color:#888;letter-spacing:-1px;text-decoration:underline;vertical-align:1px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list li.not .btn_position{color:#999}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list li.not .place_name{font-size:12px;color:#999}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list li a.btn_position:hover{color:#888;text-decoration:underline}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list li .bus_line{font-size:11px;color:#7B838E}
+.bus_realinfo .bi_info_area2 .scroll2 .route_list li.not .bus_line{color:#999}
+.bus_realinfo .bi_info_area2 .scroll2 .route_tips{position:absolute;top:14px;left:177px;z-index:10;width:103px;padding:0!important}
+.bus_realinfo .bi_info_area2 .scroll2 .route_tips .ico{float:right;width:19px;height:20px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/ico_bus_set.gif) no-repeat;font-size:0}
+.bus_realinfo .bi_info_area2 .scroll2 .route_tips .ico_bus{background-position:0 -36px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_tips .ico_bus2{background-position:0 -92px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_tips .ico_bus3{background-position:0 -148px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_tips .ico_bus4{background-position:0 -204px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_tips .ico_bus5{background-position:0 -260px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_tips .ico_bus6{background-position:0 -316px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_tips .ico_bus7{background-position:0 -372px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_tips .txt{display:block;float:left;width:73px;height:14px;_height:13px;padding:4px 5px 0 4px;_padding:5px 5px 0 4px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/sp_bg.gif) no-repeat 0 -80px;line-height:11px;font-size:11px;font-family:'돋움',dotum,AppleGothic,sans-serif;color:#798aa5;word-wrap:break-word;word-break:break-all}
+.mac .bus_realinfo .bi_info_area2 .scroll2 .route_tips .txt{font-size:10px}
+.ipad .bus_realinfo .bi_info_area2 .scroll2 .route_tips .txt{font-size:10px}
+.bus_realinfo .bi_info_area2 .scroll2 .route_tips .txt2{display:block;float:left;position:relative;top:-7px;width:73px;height:26px;*height:27px;_height:25px;padding:4px 5px 0 4px;*padding:3px 5px 0 4px;_padding:5px 5px 0 4px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/sp_bg.gif) no-repeat 0 -99px;line-height:12px;font-size:11px;font-family:'돋움',dotum,AppleGothic,sans-serif;color:#798aa5}
+.mac .bus_realinfo .bi_info_area2 .scroll2 .route_tips .txt2{font-size:10px}
+.ipad .bus_realinfo .bi_info_area2 .scroll2 .route_tips .txt2{font-size:10px}
+.bus_realinfo .bi_info_area2 .scroll2 .txt_transfer{display:block;position:absolute;top:22px;right:26px;z-index:10;width:30px;height:17px;font-size:11px !important;color:#999}
+
+
+/* 접속 지역 설정 레이어 */
+.bus_realinfo .ly_bus_search{overflow:hidden;position:absolute;top:188px;right:0;z-index:10;width:305px;height:225px;border:2px solid #595e6b;background-color:#fff}
+.bus_realinfo .ly_bus_search .ly_title_area{position:relative;width:100%;border-bottom:1px solid #d7dadf;background-color:#f7f8fa}
+.bus_realinfo .ly_bus_search .ly_title_area .ly_bus_close{overflow:hidden;position:absolute;top:12px;right:6px;width:18px;height:17px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/sp_bg.gif) no-repeat -284px -297px;text-indent:-9999px}
+.bus_realinfo .ly_bus_search .ly_title_area dl{overflow:hidden;width:auto;_width:100%;padding:10px 0;font-size:12px}
+.bus_realinfo .ly_bus_search .ly_title_area dt,.bus_realinfo .ly_bus_search .ly_title_area dd{float:left;zoom:1}
+.bus_realinfo .ly_bus_search .ly_title_area dl dt{padding:5px 8px 0 10px;font-weight:bold;color:#333 !important}
+.bus_realinfo .ly_bus_search .ly_title_area dl dd label{display:inline-block !important;margin:4px 10px 0 0;vertical-align:top}
+.bus_realinfo .ly_bus_search .ly_title_area dl dd .text{width:173px;height:12px;margin-right:-1px;padding:4px 6px 3px;border:1px solid #dcdcdc;font-size:12px}
+.bus_realinfo .ly_bus_search .ly_title_area dl dd .k_bus_area{overflow:hidden;position:absolute;margin:5px 0 0 4px;color:#b4b4b4}
+.bus_realinfo .ly_bus_search .ly_title_area dl dd .btn_search{vertical-align:top}
+.bus_realinfo .ly_bus_search .ly_content_area{margin-top:36px;text-align:center}
+.bus_realinfo .ly_bus_search .ly_content_area p{margin-bottom:2px;font-size:12px;line-height:18px;color:#666}
+.bus_realinfo .ly_bus_search .ly_content_area p a{display:inline-block;overflow:hidden;margin-top:15px;padding:1px 7px 0 0;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/sp_bg.gif) no-repeat 103px -272px;color:#666;text-decoration:underline}
+.bus_realinfo .ly_bus_search .ly_content_area2{overflow:auto;overflow-x:hidden;height:163px;*height:168px;padding:10px 16px 10px 11px;*padding:7px 13px 8px 8px;scrollbar-3dlight-color:#e7e7e7;scrollbar-highlight-color:#fff;scrollbar-shadow-color:#fff;scrollbar-darkshadow-color:#e7e7e7;scrollbar-arrow-color:#a4a4a4;scrollbar-face-color:#fff;scrollbar-track-color:#f4f4f4}
+.bus_realinfo .ly_bus_search .ly_content_area2 ul{overflow:hidden;font-size:12px;color:#444}
+.bus_realinfo .ly_bus_search .ly_content_area2 ul li{padding-bottom:4px;*padding-bottom:2px;line-height:18px}
+.bus_realinfo .ly_bus_search .ly_content_area2 ul li .input_radio{vertical-align:-2px;*vertical-align:-3px}
+.mac .bus_realinfo .ly_bus_search .ly_content_area2 ul li .input_radio{margin-left:1px}
+.bus_realinfo .ly_bus_search .ly_content_area2 ul li span{font-weight:bold}
+.bus_realinfo .ly_bus_search .ly_content_area3{margin-top:86px;text-align:center}
+.bus_realinfo .ly_bus_search .ly_content_area3 p{font-size:12px;color:#666}
+.bus_realinfo .ly_bus_search .ly_content_area3 p em{font-weight:bold;color:#ff5b00}
+
+/* 버스 간락형 숫자로만 검색 */
+.bus_realinfo .bi_wrap2{position:relative;width:590px}
+.bus_realinfo .bi_wrap2 ul{overflow:hidden;border-top:2px solid #aeb0b6;border-bottom:1px solid #b1b4ba;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/bg_line.gif) repeat-y}
+.bus_realinfo .bi_wrap2 ul li{overflow:hidden;position:relative;border-top:1px solid #f3f3f3;line-height:16px;font-size:12px}
+.bus_realinfo .bi_wrap2 ul li:first-child{border-top:none}
+.bus_realinfo .bi_wrap2 ul li .bus_num,.bus_realinfo .bi_wrap2 ul li .bus_line{display:inline-block;overflow:hidden;float:left;padding:6px 10px}
+.bus_realinfo .bi_wrap2 ul li .bus_num{width:134px}
+.bus_realinfo .bi_wrap2 ul li .bus_line{width:135px}
+.bus_realinfo .bi_wrap2 ul li .bus_num img{float:left}
+.bus_realinfo .bi_wrap2 ul li .bus_num span{display:block;overflow:hidden;padding-left:4px;zoom:1;}
+.bus_realinfo .bi_wrap2 ul li .bus_num a{font-weight:bold;text-decoration:none}
+.bus_realinfo .bi_wrap2 ul li .k_bus_time{padding-left:4px;color:#f22929}
+.bus_realinfo .bi_wrap2 ul li .k_bus_bar{padding:0 5px;color:#e5e5e5}
+.bus_realinfo .bi_wrap2 ul li .bus_time{display:inline-block;padding:6px 10px;color:#666}
+.bus_realinfo .bi_wrap2 ul li .k_bus_nt,.bus_realinfo .bi_wrap2 ul li .k_bus_rt{overflow:hidden;position:absolute;top:4px;right:10px;width:54px;height:20px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/sp_bg.gif) no-repeat 0 -230px;text-indent:-9999px}
+.bus_realinfo .bi_wrap2 ul li .k_bus_rt{background-position:-164px -230px}
+
+/* TB_목록형 버스정류장 리스트 */
+.bus_realinfo .bi_stop_area{float:left;width:307px}
+.bus_realinfo .bi_stop_area .scroll{overflow-y:auto;position:relative;height:379px;scrollbar-3dlight-color:#e7e7e7;scrollbar-highlight-color:#fff;scrollbar-shadow-color:#fff;scrollbar-darkshadow-color:#e7e7e7;scrollbar-arrow-color:#a4a4a4;scrollbar-face-color:#fff;scrollbar-track-color:#f4f4f4}
+.bus_realinfo .bi_stop_area li{overflow:hidden;position:relative;top:0;left:0;min-height:58px;padding:10px 0 7px 43px;border-top:1px solid #f5f5f5;font-size:12px;line-height:16px;vertical-align:top}
+.bus_realinfo .bi_stop_area .selec{overflow:hidden;z-index:20;margin:-1px 0;border-bottom:1px solid #e0e9f4;border-top:1px solid #e0e9f4;background:#f8fbfe}
+.bus_realinfo .bi_stop_area li:first-child{border-top:none}
+.bus_realinfo .bi_stop_area li .k_bustop_pin{overflow:hidden;position:absolute;top:10px;left:15px}
+.bus_realinfo .bi_stop_area li .k_bustop_pin a{display:block;height:28px}
+.bus_realinfo .bi_stop_area li .k_bustop_info{overflow:hidden;width:171px;margin-left:-1px;font-size:12px}
+.bus_realinfo .bi_stop_area li .k_bus_m{padding:0 0 0 6px;font-family:'돋움',Dotum;font-size:11px;color:#888;vertical-align:1px}
+.bus_realinfo .bi_stop_area li .k_bus_bar{padding:0 5px;color:#e5e5e5}
+.bus_realinfo .bi_stop_area li dl{overflow:hidden;margin-left:-1px;font-size:12px}
+.bus_realinfo .bi_stop_area li dt{float:left;padding:0 7px 0 0;color:#666}
+.bus_realinfo .bi_stop_area li dt,.bus_realinfo .bi_stop_area li dd{margin-top:4px}
+.bus_realinfo .bi_stop_area li dd a{margin-left:-1px}
+.bus_realinfo .bi_stop_area li dd img{vertical-align:-3px}
+.bus_realinfo .bi_stop_area li dd .k_bus_nmore{margin-left:9px;font-family:'돋움',Dotum;font-size:11px;color:#999;letter-spacing:-1px;text-decoration:underline;vertical-align:1px}
+.bus_realinfo .bi_stop_area li .k_bus_nt,.bus_realinfo .bi_stop_area li .k_bus_st{overflow:hidden;position:absolute;top:7px;right:10px;width:54px;height:20px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/sp_bg.gif) no-repeat 0 -230px;text-indent:-9999px}
+.bus_realinfo .bi_stop_area li .k_bus_st{width:49px;background-position:-221px -230px}
+
+/* 선택한 버스정보,버스정류장 지도 레이어 */
+.ly_bustop_map,.ly_bus_map{overflow:hidden;position:static;width:180px}
+.ly_bustop{position:relative;width:141px;padding:10px 26px 8px 13px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/ly_bus.png) no-repeat;line-height:16px;font-size:12px;font-weight:bold}
+.ly_bustop .ly_ico_pin{display:inline-block;overflow:hidden;width:16px;height:16px;*margin-top:-2px;margin-right:2px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/ico_bus_pin.gif) no-repeat;line-height:999px;vertical-align:top}
+.ly_bustop .pin_1{background-position:0 0}
+.ly_bustop .pin_2{background-position:-16px 0}
+.ly_bustop .pin_3{background-position:-32px 0}
+.ly_bustop .pin_4{background-position:-48px 0}
+.ly_bustop .pin_5{background-position:-64px 0}
+.ly_bustop .pin_6{background-position:-80px 0}
+.ly_bustop .pin_7{background-position:-96px 0}
+.ly_bustop .pin_8{background-position:-112px 0}
+.ly_bustop .pin_9{background-position:-128px 0}
+.ly_bustop .pin_10{background-position:-144px 0}
+.ly_bustop span{font-size:11px;font-weight:normal;color:#7B838E}
+.ly_bus_btn{padding:0 11px 12px 13px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/ly_bus.png) no-repeat 0 100%}
+.ly_bus_btn a{text-decoration:none}
+.ly_bus_close{overflow:hidden;position:absolute;top:5px;right:6px;width:19px;height:19px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/sp_bg.gif) no-repeat -283px -372px;line-height:999px;vertical-align:top}
+
+/* 선택한 버스정류장 레이어 */
+.bus_realinfo .bi_stop_area2{overflow:hidden;position:absolute;top:-1px;right:-1px;z-index:21;width:307px;height:379px;border:1px solid #a5a5aa}
+.bus_realinfo .bi_stop_area2.off{position:relative;top:0;right:0;border:none}
+.bus_realinfo .bi_stop_area2.off .ly_k_bustop .ly_bus_close{display:none}
+.bus_realinfo .bi_stop_area2 .ly_k_bustop{overflow:hidden;position:relative;top:0;left:0;padding:10px 0 9px 43px;border-bottom:1px solid #d7dadf;background:#f7f8fa;font-size:12px;line-height:16px;vertical-align:top}
+.bus_realinfo .bi_stop_area2 .ly_k_bustop .k_bustop_pin{overflow:hidden;position:absolute;top:10px;left:15px}
+.bus_realinfo .bi_stop_area2 .ly_k_bustop .k_bustop_pin a{display:block;height:28px}
+.bus_realinfo .bi_stop_area2 .ly_k_bustop .k_bustop_info{overflow:hidden;width:171px;margin-left:-1px;font-size:12px}
+.bus_realinfo .bi_stop_area2 .ly_k_bustop .k_bus_m{padding:0 0 0 6px;font-family:'돋움',Dotum;font-size:11px;color:#888;vertical-align:1px}
+.bus_realinfo .bi_stop_area2 .ly_k_bustop .k_bus_bar{padding:0 5px;color:#e5e5e5}
+.bus_realinfo .bi_stop_area2 .ly_k_bustop dl{overflow:hidden;margin-left:-1px;font-size:12px}
+.bus_realinfo .bi_stop_area2 .ly_k_bustop dt{float:left;padding:0 7px 0 0;color:#666}
+.bus_realinfo .bi_stop_area2 .ly_k_bustop dt,.bus_realinfo .bi_stop_area2 .ly_k_bustop dd{margin-top:4px}
+.bus_realinfo .bi_stop_area2 .ly_k_bustop dd a{margin-left:-1px}
+.bus_realinfo .bi_stop_area2 .ly_k_bustop dd img{vertical-align:-3px}
+.bus_realinfo .bi_stop_area2 .ly_k_bustop dd .k_bus_nmore{margin-left:9px;font-family:'돋움',Dotum;font-size:11px;color:#999;letter-spacing:-1px;text-decoration:underline;vertical-align:1px}
+.bus_realinfo .bi_stop_area2 .ly_k_bustop .k_bus_nt,.bus_realinfo .bi_stop_area2 .ly_k_bustop .k_bus_st{overflow:hidden;position:absolute;top:7px;right:10px;width:54px;height:20px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/sp_bg.gif) no-repeat 0 -230px;text-indent:-9999px}
+.bus_realinfo .bi_stop_area2 .ly_k_bustop .k_bus_st{width:49px;background-position:-221px -230px}
+.bus_realinfo .bi_stop_area2 .ly_k_bustop .ly_bus_close{overflow:hidden;position:absolute;top:6px;right:6px;width:18px;height:17px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/sp_bg.gif) no-repeat -284px -297px;text-indent:-9999px}
+.bus_realinfo .bi_stop_area2 .topbar,.bus_realinfo .bi_stop_area2 .topbar2,.bus_realinfo .bi_stop_area2 .topbar3{position:relative;height:25px;border-bottom:1px solid #C9CCD1;border-top:1px solid #fff;background:#F7F8FA}
+.bus_realinfo .bi_stop_area2 .topbar .k_bus_udt,.bus_realinfo .bi_stop_area2 .topbar2 .k_bus_tover,.bus_realinfo .bi_stop_area2 .topbar3 .k_bus_noinfo{padding-left:29px;padding-top:6px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/sp_bg.gif) no-repeat -278px -266px;line-height:14px;font-family:'돋움',Dotum;font-size:11px;color:#777;letter-spacing:-1px}
+.bus_realinfo .bi_stop_area2 .topbar .k_bus_udt span,.bus_realinfo .bi_stop_area2 .topbar2 .k_bus_tover span,.bus_realinfo .bi_stop_area2 .topbar3 .k_bus_noinfo span{letter-spacing:normal}
+.bus_realinfo .bi_stop_area2 .topbar2 .k_bus_tover{background-position:-278px -324px;color:#999}
+.bus_realinfo .bi_stop_area2 .topbar3 .k_bus_noinfo{background-position:-278px -346px}
+.bus_realinfo .bi_stop_area2 a.btn_refresh{display:block;overflow:hidden;position:absolute;top:-1px;right:0;width:27px;height:26px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/sp_bg.gif) no-repeat -275px -230px}
+.bus_realinfo .bi_stop_area2 .scroll2{overflow-y:auto;position:relative;height:276px;background-color:#fff;font-size:12px;scrollbar-3dlight-color:#e7e7e7;scrollbar-highlight-color:#fff;scrollbar-shadow-color:#fff;scrollbar-darkshadow-color:#e7e7e7;scrollbar-arrow-color:#a4a4a4;scrollbar-face-color:#fff;scrollbar-track-color:#f4f4f4}
+.bus_realinfo .bi_stop_area2 .scroll2.reduce{height:260px !important}
+.bus_realinfo .bi_stop_area2 .scroll2 .route_list li{overflow:hidden;position:relative;z-index:9;margin-top:-1px;padding:10px 0 8px 12px;border-top:1px solid #f5f5f5;border-bottom:1px solid #f5f5f5;font-size:12px;line-height:16px}
+.bus_realinfo .bi_stop_area2 .scroll2 .route_list li:first-child{border-top:none}
+.bus_realinfo .bi_stop_area2 .scroll2 .route_list li div{overflow:hidden}
+.bus_realinfo .bi_stop_area2 .scroll2 .route_list li div img{vertical-align:top}
+.bus_realinfo .bi_stop_area2 .scroll2 .route_list li div span{font-family:'돋움',Dotum;font-size:12px;color:#999;vertical-align:top}
+.bus_realinfo .bi_stop_area2 .scroll2 .route_list li a{font-size:12px;font-weight:bold;color:#00C;text-decoration:none}
+.bus_realinfo .bi_stop_area2 .scroll2 .route_list li a:hover{color:#00C;text-decoration:underline}
+.bus_realinfo .bi_stop_area2 .scroll2 .route_list li .place_num{padding:0 4px 0 5px;vertical-align:top}
+.bus_realinfo .bi_stop_area2 .scroll2 .route_list li .btn_position{display:inline-block;font-size:11px;font-family:'돋움',dotum,AppleGothic,sans-serif;color:#888;letter-spacing:-1px;text-decoration:underline;vertical-align:1px}
+.bus_realinfo .bi_stop_area2 .scroll2 .route_list li a.btn_position:hover{color:#888;text-decoration:underline}
+.bus_realinfo .bi_stop_area2 .scroll2 .route_list li .bus_line{display:block;overflow:hidden;padding:3px 0 0 29px;color:#666}
+.bus_realinfo .bi_stop_area2 .scroll2 .route_list li .bus_line .k_bus_bar{padding:0 4px 0 2px;color:#e5e5e5}
+.bus_realinfo .bi_stop_area2 .scroll2 .route_list li .bus_line em{color:#f22929}
+.bus_realinfo .bi_stop_area2 .scroll2 .route_list li .bus_line .k_bustop_no{color:#c5c5c5}
+
+/* 버스 정류장 지역목록형 */
+.bus_realinfo .bi_stop_area .scroll3{overflow-y:auto;position:relative;height:352px;scrollbar-3dlight-color:#e7e7e7;scrollbar-highlight-color:#fff;scrollbar-shadow-color:#fff;scrollbar-darkshadow-color:#e7e7e7;scrollbar-arrow-color:#a4a4a4;scrollbar-face-color:#fff;scrollbar-track-color:#f4f4f4}
+.bus_realinfo .bi_stop_area .topbar,.bus_realinfo .bi_stop_area .topbar2,.bus_realinfo .bi_stop_area .topbar3{position:relative;height:25px;border-bottom:1px solid #C9CCD1;border-top:1px solid #fff;background:#F7F8FA}
+.bus_realinfo .bi_stop_area .topbar .k_bus_udt,.bus_realinfo .bi_stop_area .topbar2 .k_bus_tover,.bus_realinfo .bi_stop_area .topbar3 .k_bus_noinfo{padding-left:29px;padding-top:6px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/sp_bg.gif) no-repeat -278px -266px;line-height:14px;font-family:'돋움',Dotum;font-size:11px;color:#777;letter-spacing:-1px}
+.bus_realinfo .bi_stop_area .topbar .k_bus_udt span,.bus_realinfo .bi_stop_area .topbar2 .k_bus_tover span,.bus_realinfo .bi_stop_area .topbar3 .k_bus_noinfo span{letter-spacing:normal}
+.bus_realinfo .bi_stop_area .topbar2 .k_bus_tover{background-position:-278px -324px;color:#999}
+.bus_realinfo .bi_stop_area .topbar3 .k_bus_noinfo{background-position:-278px -346px}
+.bus_realinfo .bi_stop_area a.btn_refresh{display:block;overflow:hidden;position:absolute;top:-1px;right:0;width:27px;height:26px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/bus/img/sp_bg.gif) no-repeat -275px -230px}
+.bus_realinfo .bi_stop_area .scroll3 li .bus_line{display:block;overflow:hidden;margin:3px 0 0 -1px;color:#666}
+.bus_realinfo .bi_stop_area .scroll3 li .bus_line .k_bus_bar{padding:0 4px 0 6px;color:#e5e5e5}
+.bus_realinfo .bi_stop_area .scroll3 li .bus_line em{color:#f22929}
+.bus_realinfo .bi_stop_area .scroll3 li .bus_line .k_bustop_no{color:#c5c5c5}
+
+/* 하단 문구 영역 */
+.bus_realinfo .traf_section{overflow:hidden;clear:both;border-top:1px solid #e5e5e5}
+.bus_realinfo .traf_section dl{overflow:hidden;width:auto;_width:100%;padding:10px 0 14px;font-size:12px}
+.bus_realinfo .traf_section dl dt{float:left;padding:4px 14px 0 0;font-weight:bold;color:#333 !important}
+.bus_realinfo .traf_section dl dd div{font-size:12px}
+.bus_realinfo .traf_section dl dd .tr_radio{display:inline-block !important;overflow:hidden;width:13px;height:13px;margin:3px -1px 0 0;vertical-align:top}
+.bus_realinfo .traf_section dl dd label{display:inline-block !important;margin:4px 10px 0 0;vertical-align:top}
+.bus_realinfo .traf_section dl dd .input_bnum{width:322px;*width:324px;height:12px;margin:0 -1px 0 1px;padding:4px 6px 3px;border:1px solid #dcdcdc;font-size:12px}
+.bus_realinfo .traf_section dl dd .k_bus_srch{overflow:hidden;position:absolute;margin:5px 0 0 4px;*margin-left:7px;color:#c3c3c3}
+.bus_realinfo .traf_section dl dd .btn_search{padding:0;vertical-align:top;*vertical-align:-2px}
+
+/* 대중교통 길찾기 */
+.bus_realinfo .other_links{overflow:hidden;clear:both;position:relative;margin-left:-1px;padding:7px 0 2px;_padding:13px 0 1px;border-top:1px solid #e5e5e5}
+.bus_realinfo .other_links dl{overflow:hidden;font-size:12px}
+.bus_realinfo .other_links dt{float:left;margin-right:13px;_margin-right:10px;line-height:18px;color:#444 !important}
+.bus_realinfo .other_links dd{overflow:hidden;max-width:350px;line-height:18px;zoom:1}
+.bus_realinfo .other_links .bar2{padding:0 4px;color:#d8d8d8}
