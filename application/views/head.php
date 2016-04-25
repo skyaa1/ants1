@@ -6,7 +6,9 @@
         padding-top: 60px;
 
       }
-
+      .well{
+        color:black;
+      }
     </style>
 
 
@@ -33,8 +35,15 @@
     </div>
   </div>
 </div>
-
-
+     <?php
+        if($this->config->item('is_deva')){
+          ?>
+   <div class="well span12" >
+      개발환경을 수정 중입니다
+   </div>
+<?php
+ }
+   ?>
 
      <div class="container-fluid">
        <div class="row-fluid">
