@@ -1,3 +1,24 @@
+ <?php
+ if (!$this->session->userdata('is_login')) {
+   ?>
+
+<div >
+   <form class="" action="/index.php/auth/login" method="post">
+     <input type="submit" class="btn btn-primary" name="login" value="로그인">
+   </form>
+</div>
+<?php
+} else {
+  ?>
+  <div >
+    <form class="" action="/index.php/topic/get/42" method="post">
+        <input type="submit" class="btn btn-primary" name="login" value="로그아웃">
+
+    </form>
+  </div>
+<?php
+}
+?>
 
 <div class="span10">
    <article>

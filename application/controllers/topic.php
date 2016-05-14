@@ -24,6 +24,10 @@ public function index(){
 
 public function get($id){
 
+      if($this->input->post('login') == true){
+        $this->session->set_userdata('is_login', false);
+      }
+
       $this->_head();
 
       $data1 = $this->topic_model->gets($id);
@@ -37,7 +41,11 @@ public function get($id){
 
 public function add(){
 
+      if(!$this->session->userdata('is_login')){
+       $this->load->helper('url');
+       redirect('/auth/login');
 
+      }
       $this->_head();
 
       $this->load->library('form_validation');
@@ -156,6 +164,10 @@ function updates(){
 
 
  function _head(){
+
+
+
+
        $this->load->config('opentutorials');
        $data = $this->topic_model->get();
        $this->load->view('head');
