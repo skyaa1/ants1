@@ -1,7 +1,7 @@
 <?php
  defined('BASEPATH')OR exit('NO direct script access allowed');
 
- class auth extends CI_Controller {
+ class auth extends MY_Controller {
    function __construct(){
      parent::__construct();
      $this->load->database();
@@ -9,13 +9,12 @@
 
    }
    function login(){
-     $this->load->config('opentutorials');
-     $data = $this->topic_model->get();
-     $this->load->view('head');
-     $this->load->view('login');
-     $id = $this->input->post('id');
+     $this->_head();
 
-     $this->load->view('footer');
+     $this->load->view('login');
+
+
+     $this->_footer();
 
 
 
@@ -32,9 +31,36 @@
        $this->load->helper('url');
        redirect('/topic/add');
      } else{
-       echo '틀림';
+      $this->session->set_flashdata('message', '로그인 실패');
+       $this->load->helper('url');
+       redirect('/auth/login');
+
+
+
      }
    }
+
+   function membership(){
+     $this->_head();
+
+     $this->load->view('membership');
+     $this->_footer();
+
+
+   }
+
+   function user_membership(){
+     $this->_head();
+
+    $id = $this->input->post('id');
+    $password = $this->input->post('password');
+    $email = $this->input->post('email');
+    echo($id);
+    $this->_footer();
+
+
+   }
+
  }
 
 

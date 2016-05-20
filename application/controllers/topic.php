@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Topic extends CI_Controller {
+class Topic extends MY_Controller {
 
   function __construct(){
      parent::__construct();
@@ -17,7 +17,8 @@ public function index(){
 
 
       $this->_head();
-      $this->load->view('footer');
+      $this->_sidebar();
+      $this->_footer();
 
 
 }
@@ -29,13 +30,14 @@ public function get($id){
       }
 
       $this->_head();
+      $this->_sidebar();
 
       $data1 = $this->topic_model->gets($id);
 
 
       $this->load->helper(array('url','html','korean'));
       $this->load->view('topic', array('topics'=>$data1, 'id'=>$id));
-      $this->load->view('footer');
+      $this->_footer();
 
 }
 
@@ -47,6 +49,7 @@ public function add(){
 
       }
       $this->_head();
+      $this->_sidebar();
 
       $this->load->library('form_validation');
       $this->form_validation->set_rules('name', '제목', 'required');
@@ -61,15 +64,16 @@ public function add(){
       $this->load->helper('url');
       redirect('/topic/get/'.$insert_id);
   }
-       $this->load->view('footer');
+       $this->_footer();
 }
 
 function delete(){
       $this->_head();
+      $this->_sidebar();
       $delete = $this->input->post('delete');
        $this->topic_model->delete($delete);
 
-      $this->load->view('footer');
+      $this->_footer();
       $this->load->helper('url');
       redirect('/topic');
 
@@ -77,13 +81,14 @@ function delete(){
 
 function update(){
       $this->_head();
+      $this->_sidebar();
       $this->load->helper('url');
       $update  = $this->input->post('update');
       $update_id = $this->topic_model->update($update);
       $this->load->view('topic_update', array('update'=>$update_id));
 
 
-      $this->load->view('footer');
+      $this->_footer();
 
 }
 function upload_receive_ck(){
@@ -143,19 +148,21 @@ function upload_receive_ck(){
 
 function upload_form(){
   $this->_head();
+  $this->_sidebar();
   $this->load->view('upload_form');
-  $this->load->view('footer');
+  $this->_footer();
 }
 
 
 function updates(){
       $this->_head();
+      $this->_sidebar();
       $update_changess = $this->input->post('title');
       $update_change = $this->input->post('description');
       $update_changes = $this->input->post('id');
       $this->topic_model->updates($update_change,$update_changes,$update_changess);
 
-      $this->load->view('footer');
+      $this->_footer();
       $this->load->helper('url');
       redirect('/topic/get/'.$update_changes);
 
@@ -163,16 +170,7 @@ function updates(){
 
 
 
- function _head(){
 
-
-
-
-       $this->load->config('opentutorials');
-       $data = $this->topic_model->get();
-       $this->load->view('head');
-       $this->load->view('topic_list', array('topic'=>$data));
- }
 
 }
 ?>
