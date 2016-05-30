@@ -99,9 +99,9 @@ function upload_receive_ck(){
   // 허용되는 파일의 최대 사이즈
   $config['max_size'] = '10000';
   // 이미지인 경우 허용되는 최대 폭
-  $config['max_width']  = '1024';
+  $config['max_width']  = '4024';
   // 이미지인 경우 허용되는 최대 높이
-  $config['max_height']  = '768';
+  $config['max_height']  = '4768';
   $this->load->library('upload', $config);
 
   if (! $this->upload->do_upload("upload")){
@@ -121,7 +121,7 @@ function upload_receive_ck(){
 
 }
 
- function upload_receive(){
+ /* function upload_receive(){
    // 사용자가 업로드 한 파일을 /static/user/ 디렉토리에 저장한다.
    $config['upload_path'] = './static/user';
    // git,jpg,png 파일만 업로드를 허용한다.
@@ -144,7 +144,7 @@ function upload_receive_ck(){
    }
 
  }
-
+    */
 
 function upload_form(){
   $this->_head();

@@ -45,6 +45,19 @@ function updates($update_change,$update_changes,$update_changess){
 
 }
 
+function membership(){
+     return $this->db->query("select * FROM user")->result();
+
+  }
+
+function is_membership($email, $password){
+   $this->db->set('created' ,'now()' , false);
+   $this->db->insert('user' ,array(
+      'email'=>$email ,
+      'password'=>$password
+   ));
+  
+}
 
    }
 

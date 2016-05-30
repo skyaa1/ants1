@@ -21,45 +21,97 @@
    }
 
    function authentication(){
-    $id = $this->config->item('authentication');
+
+    $id = $this->topic_model->membership();
 
 
-     if($id['id'] == $this->input->post('id') &&
-        $id['password'] == $this->input->post('password')
+    foreach ($id as $key ){
+     if($key->email === $this->input->post('id') &&
+     $key->password === $this->input->post('password')
      ){
+
+       $this->session->set_flashdata('message', '로그인됐당');
        $this->session->set_userdata('is_login', true);
        $this->load->helper('url');
-       redirect('/topic/add');
-     } else{
-      $this->session->set_flashdata('message', '로그인 실패');
-       $this->load->helper('url');
-       redirect('/auth/login');
-
-
+       redirect('/topic/get/42');
 
      }
+
+
+
+
+
    }
+
+   if( $this->session->userdata('is_login') == false){
+
+         $this->session->set_flashdata('message', '누구냐 넌');
+         $this->load->helper('url');
+         redirect('/auth/login');
+   }
+
+}
 
    function membership(){
      $this->_head();
+     $this->load->model('topic_model');
+     $membership = $this->topic_model->membership();
+     $e = 0;
+
+     if($this->input->post('email')){
+       $password1 = $this->input->post('password1');
+       $password = $this->input->post('password');
+       $email = $this->input->post('email');
+
+       $this->load->helper('url');
+       foreach ($membership as $key) {
+         if($key->email === $email){
+           $e = 1;
+       ?>
+          <script>
+          alert("아이디가 중복되었습니다 다른 아이디로 시도하세요");
+
+           </script>
+
+
+<?php
+
+
+          }else{
+            $this->load->view('membership', array('email'=> $email));
+
+          }
+        }
+          if(! ($password === $password1) ){
+
+           ?>
+             <script>
+               alert('패스워드가 일치하지 않습니다');
+             </script>
+<?php
+        } else if(empty($password)){
+           ?>
+             <script>
+               alert('패스워드를 입력해주세요');
+             </script>
+<?php
+        } else if(! ($e == 1)){
+           $this->topic_model->is_membership($email, $password);
+           redirect('/topic/get/42');
+          ?>
+            <script>
+              alert('가입성공! 당신의 통장에서 10,000,000원이 다른 통장으로 이체되었습니다 ');
+            </script>
+  <?php
+        }
+
+     }
 
      $this->load->view('membership');
-     $this->_footer();
-
-
-   }
-
-   function user_membership(){
-     $this->_head();
-
-    $id = $this->input->post('id');
-    $password = $this->input->post('password');
-    $email = $this->input->post('email');
-    echo($id);
-    $this->_footer();
-
+       $this->_footer();
 
    }
+
 
  }
 

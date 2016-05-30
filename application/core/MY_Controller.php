@@ -11,9 +11,6 @@
 
      function _head(){
 
-
-
-
            $this->load->config('opentutorials');
            $this->load->view('head');
      }
