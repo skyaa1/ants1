@@ -1,4 +1,4 @@
-
+ 
 
   <div class="modal" >
     <form action="/index.php/auth/membership" class="form-horizontal" method="post">

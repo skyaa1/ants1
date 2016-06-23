@@ -11,7 +11,7 @@
         <div class="control-group">
   <label class="control-label" style="color:blue;" for="inputEmail">email</label>
   <div class="controls" >
-    <input type="text" id="inputEmail" name="id" style="width:auto;" placeholder="email">
+    <input type="text" id="inputEmail" name="email" style="width:auto;" placeholder="email">
   </div>
 </div>
 <div class="control-group">

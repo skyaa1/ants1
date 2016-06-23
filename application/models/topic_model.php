@@ -45,9 +45,9 @@ function updates($update_change,$update_changes,$update_changess){
 
 }
 
-function membership(){
-     return $this->db->query("select * FROM user")->result();
-
+function membership($topic){
+     $id =  $this->db->get_where('user', array('email'=>$topic['email']))->row();
+   return $id;
   }
 
 function is_membership($email, $password){
@@ -56,7 +56,7 @@ function is_membership($email, $password){
       'email'=>$email ,
       'password'=>$password
    ));
-  
+
 }
 
    }
